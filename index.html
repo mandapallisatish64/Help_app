@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  
+<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
+
+  
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+
+  <script>
+$(document).ready(function(){
+    console.log("came inside");
+
+$(".help-inf,.bd").hide();
+$(".cost").click(function() {
+    console.log("entredd");
+    $(".section1").show();
+    $('html, body').animate({
+                    scrollTop: $(".pricing").offset().top
+                }, 500);
+                
+});
+$(".more").click(function() {
+    console.log("entredd");
+    
+    $('html, body').animate({
+                    scrollTop: $(".content1").offset().top
+                }, 1000);
+});
+$(".multiple-items").slick({
+  dots: true,
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  arrows:true,
+
+responsive: [
+  
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+      ]
+});
+$('.about').click(function(){
+      $('.help-inf').show();
+       $(".section1,.bd").hide();
+})
+$('.home').click(function(){
+  $(".section1").show();
+       $(".help-inf,.bd").hide();
+})
+$('.contact').click(function(){
+  $(".bd").show();
+       $(".section1,.help-inf").hide();
+})
+});
+  </script>
+  <style>
+    .multiple-items img{
+      width:250px;
+      height:250px;
+    }
+   
+
+.start{
+    width:100%;
+    height: 700px;
+}
+.slick-next {
+    right: 15px;
+}
+.slick-prev {
+    left: 3px;
+}
+
+.myTable { background-color:#eee;border-collapse:collapse; }
+.myTable th { background-color:#000;color:white;width:50%; }
+.myTable td, .myTable th { padding:5px;border:1px solid #000; }
+#h {
+    text-shadow: 1px 1px;
+  }
+
+  
+.slick-list{
+  margin:60px;
+}
+.help-inf{
+          background-image: url('images/background.jpg');
+        }
+.bottom-left {
+    max-width: 40rem;
+  position: absolute;
+  top: 190px;
+  left: 160px;
+  font-size:64px;
+  color:white;
+}
+.slick-prev:before, .slick-next:before{
+    color:red;
+}
+
+.bd,.help-inf{
+  padding-top:60px;
+}
+.more{
+    font-size:large;
+   
+}
+@media only screen and (max-width: 375px) {
+      .start{
+      width:400px;
+      height:700px;
+    }
+  </style>
+  
+</head>
+<body>
+<div class="container-fluid">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  
+    
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <div class="navbar-header">
+        <a class="navbar-brand header" href="#">HELP</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+    <ul class="nav navbar-nav">
+      <li class=" active"><a class="home" href="#">Home</a></li>
+      <li class="active"><a class="about" href="#">About Us </a>
+        
+      </li>
+      <li class="active"><a class="cost" href="#">Pricing  </a>
+        
+      </li>
+      <li class="active"><a class="contact" href="#">Emergency Contact</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="help section1 active">
+<img class="start" src="images/Wearing Lifeline Autoalert Button.jpg"></img>
+<div class="bottom-left">YOU ENJOY WE CARE
+    
+    <div>
+           <button  type="button" class="more btn btn-primary btn-lg">Know More</button>
+    </div>
+</div>
+
+<div class="content1">
+<h1>Health Emergency Lifeline Program, Inc.</h1>
+
+<p>
+The local Health Emergency Lifeline Program, Inc. (H.E.L.P.) is a Lifeline Program Partner with Philips Lifeline.  HELP buys and then leases equipment to subscribers within Nodaway County to use to signal when a medical emergency occurs.  Knowing that emergency assistance is available with the push of a button allows subscribers to remain in their own home and maintain an independent lifestyle. 
+</p>
+<h2>Our Shared Purpose…</h2>
+<p>
+        Health Emergency Lifeline Program, Inc. (HELP) is an all-volunteer organization providing LifelineTM technology to community members living in Nodaway County and designated adjacent communities. 
+        <div>
+                As volunteers we strive to provide dependable and reliable services linking subscribers to an emergency response center in case of a health emergency through appropriate technology at reasonable cost thereby allowing the subscriber to remain independently in the comfort and safety of their personal residence.
+        </div>
+</p>
+</div>
+<div class="pricing">
+<h3>Medical Alert Items Pricing:</h3>
+<div class="multiple-items">
+<div>
+   <img src="images/6900 Communicator.jpg"> 
+   <figcaption>6900 Communicator</figcaption>
+   <figcaption>Monthly Fee: $25</figcaption>
+   <figcaption>No Activation Fee</igcaption>
+    <figcaption>No Installation Fee</figcaption>
+
+</div>
+<div>
+  <img src="images/7000 Communicator and Autoalert Button.jpg" >
+  <figcaption>7000 Unit with Auto Alert Fall Detection Button</figcaption>
+   <figcaption>Monthly Fee: $35</figcaption>
+   <figcaption>No Activation Fee</igcaption>
+    <figcaption>No Installation Fee</figcaption>
+</div>
+<div>
+   <img src="images/7000 Communicator and Standard Button.jpg">
+   <figcaption>7000 Unit with Mobile Help Button with Fall Detection</figcaption>
+   <figcaption>Monthly Fee: $45</figcaption>
+   <figcaption>No Activation Fee</igcaption>
+    <figcaption>No Installation Fee</figcaption>
+</div>
+<div>
+    <img src="images/Communicators and Buttons.jpg" >
+    <figcaption>Communicators and Buttons</figcaption>
+   <figcaption>Monthly Fee: $25</figcaption>
+   <figcaption>No Activation Fee</igcaption>
+    <figcaption>No Installation Fee</figcaption>
+</div>
+<div>
+  <img src="images/Family of Buttons.jpg" >
+  <figcaption>Family of Buttons</figcaption>
+   <figcaption>Monthly Fee: $25</figcaption>
+   <figcaption>No Activation Fee</igcaption>
+    <figcaption>No Installation Fee</figcaption>
+</div>
+<div>
+  <img src="images/Gosafe Button.jpg">
+  <figcaption>GoSafe2 Mobile Help Button with Fall Detection</figcaption>
+  <figcaption>Monthly Fee: $45</figcaption>
+  <figcaption>No Activation Fee</igcaption>
+   <figcaption>No Installation Fee</ficaption>
+</div>
+</div>
+</div>
+</div>
+<div class="help-inf">
+  <h3>Information about us:</h3>
+  <h3 style="text-align:center;"><b>Health Emergency Lifeline Program, Inc.</b></h3>
+    <p>In 1983 Bonnie Williams, daughter of respected Maryville resident Inez Bowman, 
+        told her mother about an emergency response system that was available in Iowa City,
+         IA.  She thought her mother might be interested in the program.  Inez was intrigued 
+         by the concept and brought it to the Maryville Citizens for Community Action (MCCA) 
+         for consideration.  The MCCA Human Resources Task Force thought it warranted further
+          investigation and approached St. Francis Hospital to see if they would be interested 
+          in establishing the program.  The Hospital had already heard of the program and they 
+          were considering it.</p>
+    </br>
+    <p>A committee, consisting of Martin Goedken from St. Francis Hospital, Mildred Davis, 
+            Inez Bowman and Donna Holt traveled to St. Joseph, MO to talk to the Lifeline volunteer
+             coordinator to see how their organization operated.  After this meeting the St. Francis 
+             Hospital administration decided that the funds were not available to buy the units necessary
+              to begin the program.  Undaunted, a group of individuals decided to undertake the program.
+    </p>
+<p> Frank strong volunteered to help file the articles of incorporation that were signed by Inez Bowman 
+        as vice president, Bob Bush as president and Donna Holt as treasurer.  On May 11, 1984, the Health 
+        Emergency Lifeline Program (HELP) became a not-for-profit corporation.  A federal tax number was issued 
+        to the new organization on October 18, 1984.  The all-volunteer organization known as, the Health 
+        Emergency Lifeline Program, Inc. was born.
+</p>
+<p>The first contract with Lifeline Systems, Inc., whose home office is in Massachusetts, was signed on June 
+        29, 1984.  The units and new response center were shipped, and the first installation was set up for 
+        Wednesday, August 22, 1984 at 11:00 a.m. for Florence Zimmerman.  It was quite a media event KQTV out
+         of St. Joseph, MO and local media attending.</p>
+<p>Funding to start the program came from two large donations.  The St. Francis Hospital Auxiliary donated 
+        $5,000 and the Business and Professional Women (BPW) donated $5,000 that had come to them from a bequest. 
+         Officers of HELP decided to lease the equipment rather than purchase it outright.  
+         This turns out to have been a wise decision.  HELP would not have been able to expand the program if the 
+         home units and response center had to be purchased.  At the time, individual units cost $495 and the 
+         response center $7,000.
+</p>
+<p>Leasing has allowed HELP to stay current with the latest technology.  The life of each lease is five years. 
+         When the time period for each lease is ended, HELP’s Executive Committee seeks approval from its Board of 
+         Directors to enter a new lease for the same number, a lesser number or a greater number of units.  
+         That decision is driven by whether there are several names on the waiting list.  With over 150 units in 
+         service in 2008, the program continues to be a valuable resource for Nodaway county community members and
+          those living in the surrounding area whose doctors utilize St. Francis Hospital and Health Services. 
+           In the summer of 2004, the volunteers who operate the program were happy to celebrate 20 years of dedicated
+            service and caring for their neighbors through the Health Emergency Lifeline Program.
+</p>
+<p>In 2011 a transition from site monitoring at St. Francis Hospital to central monitoring from a location 
+        in Massachusetts was successfully completed.  This change occurred because the site monitoring unit at
+         St. Francis would become obsolete in 2012-- no longer able to be serviced.  Site monitoring was free;
+          central monitoring carries a monthly charge for each unit monitored. HELP has converted all program units
+           from leased to owned property over the past 5 years with the return of the final leased units to Lifeline 
+           in February 2015.  The commitment to ownership allows HELP to keep costs as affordable as possible to our 
+           Nodaway County subscribers.  
+</p>
+<p> HELP current inventory has declined due to the discontinuance of the first digital units (DT 1000) and 
+        rollovers, we currently have an inventory of 88 units which includes the addition of cellular based 
+        units. HELP still has some DT 1000s in use and are gradually replacing them as they fail to work. 
+         Future purchases will include both landline (6900 Model Units) and cellular (7000 Series Units) 
+         communicators.  In addition, there are units now being used that are mobile and do not use a base 
+         communicator.  Communication is all through the button.
+</p>
+<p>
+        Since 1984, HELP has served 1,155 subscribers as of 2019.  Of the current subscribers, 78 have had 
+        Lifeline between one to ten years; 6 have had Lifeline over ten years of which 2 subscribers have 
+        received services for more than 15 years.  Remaining in the security and comfort of their own home has 
+        been a reality for these valued members of our community.
+</p>
+
+<h3 style="text-align:center;"><b>HIGHLIGHTS</b></h3>
+<ul>
+    <li>1983 – Inez Bowman brought the idea of Lifeline to the attention of the community group known as the “Maryville Citizens for Community Action”.</li>
+    <li>May 1984 – Health Emergency Lifeline Program, Inc. was officially incorporated.</li>
+    <li>HELP formed as a not-for-profit, all-volunteer organization in the St. Francis Hospital service region.
+    </li>
+    <li>
+        The program is site monitored with all units leased.
+    </li>
+    <li>
+            The first 12 units were installed beginning in August 1984.
+    </li>
+    <li>
+    	March of 1986, the founder of Lifeline Systems, Inc., Dr. Andrew Dibner, visited Maryville.
+    </li>
+    <li>
+        The Health Emergency Lifeline Program received a grant from Lifeline Systems (through the efforts of Dr. Dibner) in the amount of $4,000 for writing a “manual” entitled, “Forming an All-Volunteer Lifeline Program” which was submitted in December 1986.
+    </li>
+    <li>
+        In 1987 Bob Bush, first HELP president, served on the planning committee for the Lifeline systems national conference held in Kansas City, Missouri.
+    </li>
+    <li>
+    HELP has grown to as many as 181 leased units; leasing allows the program to offer the most up-to-date technology to its subscribers.
+    </li>
+    <li>
+      St. Francis Hospital and Health Services provided personnel to monitor the RC500 response unit, free of charge to the program 365 days a year, 24 hours a day to 2010.
+    </li>
+    <li>
+            In 2010, due to the high cost of replacing the RC500 response unit, HELP joined the Central Monitoring Program provided by Philips Lifeline.
+    </li>
+    <li>
+    Between 1984 and 2019, HELP has served 1,155 subscribers.  Remaining in the security and comfort of their own home has been a reality for these valued members of our community.
+    </li>
+    <li>
+    HELP has consistently received funding from the local United Way and various service groups throughout the county to provide units to subscribers with modest means.
+    </li>
+</ul>
+
+</div>
+
+
+
+<div class="bd">
+
+  <h3 id="h">Business Card for HELP
+  </h3>
+<p>Health Emergency Lifeline Program, Inc. serving Nodaway County:<br>
+“Emergency Assistance at the Press of a Button”</p>
+<table border="1" class="myTable">
+
+<tr><th class="myTable th">CONTACT NAME
+   
+</th>
+<th class="myTable th">MOBILE NUMBER
+   
+  </th>
+</tr>
+
+<tr>
+  <td> Janet Hull</td>
+  <td> Home #:	660-582-7527</td>
+</tr>
+<tr>
+      <td> Russ Schuster</td>
+      <td>Cell #: 660-853-1776</td>
+  </tr>
+  <tr>
+          <td> Doug Keever</td>
+          <td> Cell #:	660-562-7779</td>
+      </tr>
+      <tr>
+              <td> Jim</td>
+              <td> Home #: 660-582-5060</td>
+          </tr>
+          <tr>
+                  <td> Barbara York</td>
+                  <td> Cell #: 660-254-9988</td>
+              </tr>
+  </table>
+
+
+
+
+</div>
+
+<footer class="page-footer font-small black">
+
+    
+    <div class="footer-copyright text-center py-3">
+      <a href="https://www.nwmissouri.edu/">@NW_LINK: </a>
+      Developed By: Section-04/Group-04
+    </div>
+    
+  
+  </footer>
+
+
+
+</div>
+
+
+ 
+
+</body>
+</html>
