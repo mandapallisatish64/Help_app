@@ -25,4 +25,3 @@ References:
   <div>
 <a href="https://kenwheeler.github.io/slick/">Slick Tutorial</a>
   </div>
- 
